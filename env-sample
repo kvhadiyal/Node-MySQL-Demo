@@ -1,0 +1,7 @@
+PORT=3000
+NODE_ENV=local
+ISSUER=DEMO
+AUDIENCE=http://demo.com
+URL=http://localhost:3000
+NO_REPLY=noreply@gmail.com
+SALT_ROUNDS=10
