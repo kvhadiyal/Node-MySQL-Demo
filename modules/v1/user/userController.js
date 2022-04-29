@@ -19,7 +19,7 @@ userController.login = async (req, res) => {
 			user,
 		} = req;
 		let responseData = {};
-		if (!utils.empty(user) && password && (password === 'Madisons@123' || userService.authenticate(password, user.password))) {
+		if (!utils.empty(user) && password && (userService.authenticate(password, user.password))) {
 			responseData = await userController.doLogin(user, req, res);
 			return res.status(SUCCESSCODE.STANDARD).json({
 				msg: req.t('LOGIN_SUCCESS'),
